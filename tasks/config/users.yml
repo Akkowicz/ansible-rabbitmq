@@ -17,5 +17,4 @@
     tags: "{{ item.tags | default(omit) }}"
     state: "{{ item.state | default('present') }}"
     update_password: "{{ item.update_password | default('always') }}"
-  no_log: true
   loop: "{{ rabbitmq_users }}"
